@@ -1,6 +1,8 @@
-# Dataset: Multi-Source Facial Identification & Segmentation
+# Skin Tone In the Wild Dataset (STW)
 
-This repository contains the processing scripts and data organization structure for our facial identification dataset. The dataset aggregates several sources to provide a robust collection of full-frame and segmented facial images with corresponding annotations.
+This repository contains the processing scripts and data organization structure for our facial skin tone identification dataset. The dataset aggregates several sources to provide a robust collection of full-frame and segmented facial images with corresponding skin tone annotations.
+
+The dataset contains roughly 40k thousand images of 3.5k individuals.
 ---
 
 ⚠️ Work in Progress
@@ -76,3 +78,6 @@ The training scripts are designed to automatically detect the `splits/` folder w
 
 
 
+## Annotations.
+
+If you'd like to try, you can rewrite the scripts under the `annotation` folder to annotate your own data.
