@@ -17,7 +17,7 @@ To clone this repo:
 git clone https://github.com/vitorpmh/STW.git
 ```
 
-Create a venv and install requirements (works with python <= 3.12.11)
+Create a venv and install requirements (works with python <= 3.12.11 and cuda 11.8)
 
 ```bash
 python -m venv venv
