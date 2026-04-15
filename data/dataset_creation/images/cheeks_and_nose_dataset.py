@@ -11,16 +11,12 @@ output_path = os.path.join('data/images/all_cropped_cheeks_nose_images')
 os.makedirs(output_path, exist_ok=True)
 for i in range(1,11):
     os.makedirs(os.path.join(output_path, f"{i}"), exist_ok=True)
-input_path = 'data/OpenData/'
+input_path = 'data/images/all_cropped_images_by_class'
 log = open('data/images/log_cheeks_nose.txt','w')
 
 paths = []
-def process_image(path, label, new_token):
-    path_2_save = (output_path 
-                   + f'/{label}/' 
-                   + new_token 
-                   + '_' 
-                   + path.split('/')[-1])
+def process_image(path, label, new_token, path_2_save):
+    path_2_save = path_2_save
     
 
     # if the path exists with png or other just rewrite it into jpg
@@ -52,9 +48,20 @@ def process_image(path, label, new_token):
 
 def copy_image(df):
     for path, label, new_token in tqdm(df[['paths','class','new_tokens']].values):
+        basename = path.split('/')[-1]
+        extension = basename[basename.rfind('.'):]
+        basename = basename[:basename.rfind('.')]
+        token_expanded = new_token + basename + "_face_1" + ".jpg"
+        path = os.path.join(input_path, str(label), token_expanded)
         log.write(f"Processing: {path}\n")
-        path = os.path.join(input_path, path)
-        process_image(path, label, new_token)
+         
+        path_2_save = (output_path 
+                    + f'/{label}/' 
+                    + new_token 
+                    + '_' + basename + extension
+                    )
+        log.write(f"Saving: {path_2_save}\n")
+        process_image(path, label, new_token, path_2_save)
 
 
 if __name__ == "__main__":
