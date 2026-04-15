@@ -76,7 +76,7 @@ chmod +x data/dataset_creation/create_data.sh
 
 ## 🛠️ Usage
 
-The training scripts are designed to automatically detect the `splits/` folder within the `data/` directory. Once the processing script has finished, you are ready to begin training or evaluation.
+Training script and other stuff will come out soon.
 
 
 
