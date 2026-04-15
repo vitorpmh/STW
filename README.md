@@ -3,6 +3,7 @@
 This repository contains the processing scripts and data organization structure for our facial skin tone identification dataset. The dataset aggregates several sources to provide a robust collection of full-frame and segmented facial images with corresponding skin tone annotations.
 
 The dataset contains roughly 40k thousand images of 3.5k individuals.
+
 ---
 
 ⚠️ Work in Progress
@@ -13,10 +14,10 @@ This is an open repository. The current state of the code and data does not yet 
 
 To clone this repo:
 ```bash
-git clone ...
+git clone https://github.com/vitorpmh/STW.git
 ```
 
-Create a venv and install requirements
+Create a venv and install requirements (works with python <= 3.12.11)
 
 ```bash
 python -m venv venv
@@ -51,9 +52,11 @@ Due to licensing, some datasets must be downloaded directly from the providers. 
 
 | Dataset | Source | Requirements |
 | :--- | :--- | :--- |
-| **CasiaFaceAfrica** | [IdealTest](https://www.idealtest.org/#/) | Account required |
-| **CasiaV5** | [IdealTest](https://www.idealtest.org/#/) | Account required |
-| **CelebA** | [MMLab](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) | Download "Align&Cropped Images" (`img_align_celeba.zip,identity_CelebA.txt`) |
+| **CasiaFaceAfrica** | <a href="https://www.idealtest.org/#/" target="_blank">IdealTest</a> | Account required |
+| **CasiaV5** | <a href="https://www.idealtest.org/#/" target="_blank">IdealTest</a> | Account required |
+| **CelebA** | <a href="https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html"> MMLab </a> | Download "Align&Cropped Images" (`img_align_celeba.zip,identity_CelebA.txt`) |
+
+Ensure taht CelebA is inside `data_celeb_a`. 
 
 ### 3. Data Processing
 Once the external datasets are in `data/OpenData/`, run:
