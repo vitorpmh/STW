@@ -1,0 +1,20 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run main with config",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "main.py",
+                "--config",
+                "experiments/densenet_baseline.yaml"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}

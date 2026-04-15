@@ -1,0 +1,27 @@
+--extra-index-url https://download.pytorch.org/whl/cu118
+
+# Core ML & Computer Vision
+torch
+torchvision
+torchaudio
+timm
+torchmetrics
+
+# Data Processing & Augmentation
+numpy
+pandas
+scikit-learn
+albumentations
+opencv-python
+pillow
+
+# Visualization
+matplotlib
+seaborn
+
+# Specialized Tools
+mediapipe==0.10.21
+grad-cam
+gdown
+requests
+tqdm
