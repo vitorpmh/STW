@@ -90,11 +90,11 @@ If you'd like to try, you can rewrite the scripts under the `annotation` folder 
 We are still deriving a specific license. Currently you should follow each dataset LICENSE. 
 
 We also ask for citations:
-
+```
 @misc{matias2026largescaledatasetbenchmarkskin,
       title={Large-Scale Dataset and Benchmark for Skin Tone Classification in the Wild}, 
       author={Vitor Pereira Matias and Márcus Vinícius Lobo Costa and João Batista Neto and Tiago Novello de Brito},
       year={2026},
       url={https://arxiv.org/abs/2603.02475}, 
 }
-
+```
